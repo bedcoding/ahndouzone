@@ -33,13 +33,14 @@
 
                             <!-- 자유게시판 버튼 -->
                             <a href="bbs.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sideber">
-                                <img style="width: 20px;" src="./img/board.svg"> <span class="d-none d-md-inline"> 게시판 </span>
+                                <img style="width: 20px;" src="./img/board.svg"> <span class="d-none d-md-inline"> 자유게시판 </span>
                             </a>
 
                             <!-- Q&A 버튼 -->
-                            <a href="qna.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sideber">
-                                <img style="width: 20px;" src="./img/qna.svg"> <span class="d-none d-md-inline"> Q & A </span>
+                            <a href="http://ggavi2000.cafe24.com/douzone/" class="list-group-item d-inline-block collapsed" data-parent="#sideber">
+                                <img style="width: 20px;" src="./img/qna.svg"> <span class="d-none d-md-inline"> 포트폴리오 </span>
                             </a>
+
 
 						<!-- 검색 버튼
                             <a href="#search" class="list-group-item d-inline-block collapsed" 
@@ -124,7 +125,7 @@
 
                         <br><br><br><br><br>
                         <footer class="text-center" style="max-width:720px;">
-                            <p> Copyright &copy; 2019 <b>안성민</b> duzon bizon 이력서 제출용 </p> 
+                            <p> Copyright &copy; 2019 <b>안성민</b> </p> 
                         </footer>
 
                     </main>

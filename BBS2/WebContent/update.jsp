@@ -8,9 +8,12 @@
     <head>
         <title> 안성민 (더존 이력서 제출용) </title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/custom.css">
+        
+        <!-- 부트스트랩 -->
+		<meta name="viewport" content="width=device-width", initial-scale="1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/custom.css">
+        
         <body>
             <%
                 // 로그인이 된 사람은 그 로그인 정보를 담는다
@@ -53,67 +56,62 @@
                     script.println("</script>");
                 }
             %>
-                    
+
             <div class="container-fluid">
-                <div class="row d-flex d-md-block flex-nowrap wrapper">
-                    
-                    <nav class="col-md-2 float-left col-1 p1-0 pr-0 collapse width show" id="sidebar" >
-                            <!-- 내비게이션 -->
-                    <div class="list-group border-0 card text-center text-md-left">
-                            
-                            <!-- 메인 버튼 -->
-                            <a href="main.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sideber">
-                                <img style="width: 20px;" src="./img/home.svg"> <span class="d-none d-md-inline"> 메인 </span>
-                            </a>
-
-                            <!-- 회원관리 버튼 4개 -->
-                            <a href="#usermenu" class="list-group-item d-inline-block collapsed" 
-                                data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-                                <img style="width: 20px;" src="./img/user.svg"> <span class="d-none d-md-inline"> 회원 </span>
-                            </a>
-                            
-                            <div class="collapse" id="usermenu">
-                            	<!-- <a href="./userEdit.html" class="list-group-item" data-parent="#sidebar"> 회원정보 수정 </a> -->
-                            	<a href="logoutAction.jsp" class="list-group-item" data-parent="#sidebar"> 로그아웃 </a>
-                            </div>
-
-
-                            <!-- 자유게시판 버튼 -->
-                            <a href="bbs.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sideber">
-                                <img style="width: 20px;" src="./img/board.svg"> <span class="d-none d-md-inline"> 게시판 </span>
-                            </a>
-
-                            <!-- Q&A 버튼 -->
-                            <a href="qna.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sideber">
-                                <img style="width: 20px;" src="./img/qna.svg"> <span class="d-none d-md-inline"> Q & A </span>
-                            </a>
-
-<!-- 
-                            검색 버튼
-                            <a href="#search" class="list-group-item d-inline-block collapsed" 
-                            data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-                                <img style="width: 20px;" src="./img/search.svg"> <span class="d-none d-md-inline"> 검색 </span>
-                            </a>
-
-                            <div class="collapse" id="search">
-                                <div class="input-group p-2" style="background-color: #1c1c1c;">
-                                    <input type="text" class="form-control" placeholder="내용을 입력하세요.">
-                                </div>
-                            </div> 
--->
-                        </div>
-                    </nav> <!-- 메뉴 버튼 끝 -->
+                <div class="row d-flex d-md-block flex-nowrap wrapper">		                    
+					<nav class="navbar navbar-default"  style="background-color: #515151;">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+							aria-expanded="false">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="main.jsp" style="color:white"> 안성민 사이트</a>
+						</div>
+						
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav"> 
+								<!-- class="active"를 통해 현재 접속한 페이지를 표시한다 -->
+								<li>
+									<a href="main.jsp" style="color:white">
+										<span class="d-none d-md-inline"> 메인화면 </span>
+									</a>
+								</li>
+								
+								<li class="active">
+									<a href="bbs.jsp">자유게시판</a>
+								</li>
+								
+								<li>
+									<a href="http://ggavi2000.cafe24.com/douzone/" style="color:white">포트폴리오</a>
+								</li>
+							</ul>
+							
+							<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle"
+										data-toggle="dropdown" role="button" aria-haspopup="true"
+										aria-expanded="false" style="color:white"> 회원관리 <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="logoutAction.jsp"> 로그아웃 </a></li>
+									</ul>
+								</li>
+							</ul>
+						
+						</div>	
+					</nav>
 
 
                     <!-- 회원가입 메인 화면 -->
-                    <main id="main" class="col-md-9 float-left col px-5 pl-md-5 pt-3 main">
+                    <main id="main" class="col-md-12 float-left col px-5 pl-md-5 pt-3 main">
                         <div class="page-header mt-3">
                             <h2> 글 수정 </h2>
                         </div>
-                        <hr>
 
 
-                        <form method="post" action="updateAction.jsp?bbsID=<%= bbsID %>" class="pt-3" style="max-width:920px;">
+                        <form method="post" action="updateAction.jsp?bbsID=<%= bbsID %>" class="pt-3">
                             <div class="form-group">
                                 <label> 제목 </label>
                                 <input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" value="<%= bbs.getBbsTitle() %>">
@@ -129,7 +127,7 @@
 
                         <br><br><br><br><br>
                         <footer class="text-center" >
-                            <p> Copyright &copy; 2019 <b>안성민</b> duzon bizon 이력서 제출용 </p> 
+                            <p> Copyright &copy; 2019 <b>안성민</b> </p> 
                         </footer>
 
                     </main>

@@ -13,13 +13,11 @@ public class UserDAO {
 
 	public UserDAO() {
 		try {
-			//String dbURL = "jdbc:mysql://localhost:3306/BBS?serverTimezone=UTC";  // 3306은 내 컴퓨터에 설치된 mySQL 그 자체를 뜻함
-			//String dbID = "root";
-			//String dbPassword = "root";
+			String dbURL = "jdbc:mysql://localhost:3306/BBS?serverTimezone=UTC";  // 3306은 내 컴퓨터에 설치된 mySQL 그 자체를 뜻함
+			String dbID = "root";
+			String dbPassword = "root";
 			
-			String dbURL = "jdbc:mysql://localhost/ahndouzone?serverTimezone=UTC";
-			String dbID = "ahndouzone";
-			String dbPassword = "dlqtkwldnjsdyd12";
+
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);

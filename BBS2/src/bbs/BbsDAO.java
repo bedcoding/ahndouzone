@@ -15,13 +15,10 @@ public class BbsDAO {
 
 	public BbsDAO() {
 		try {
-			//String dbURL = "jdbc:mysql://localhost:3306/BBS?serverTimezone=UTC";
-			//String dbID = "root";
-			//String dbPassword = "root";
+			String dbURL = "jdbc:mysql://localhost:3306/BBS?serverTimezone=UTC";
+			String dbID = "root";
+			String dbPassword = "root";
 			
-			String dbURL = "jdbc:mysql://localhost/ahndouzone?serverTimezone=UTC";
-			String dbID = "ahndouzone";
-			String dbPassword = "dlqtkwldnjsdyd12";
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);

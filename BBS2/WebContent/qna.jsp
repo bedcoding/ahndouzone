@@ -134,7 +134,7 @@
 
                         <br><br><br><br><br>
                         <footer class="text-center" style="max-width: 1080px">
-                            <p> Copyright &copy; 2019 <b>안성민</b> duzon bizon 이력서 제출용 </p> 
+                            <p> Copyright &copy; 2019 <b>안성민</b> </p> 
                         </footer>
 
                     </main>
